@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Namaz</title>
+  </head>
+  <style>
+    .marked {
+      background-color: yellow;
+    }
+    h1 {
+      align: center;
+    }
+    table, th, td {
+      border:1px solid gray;
+    }
+    th {
+    text-align: center;
+    height: 30px;
+    width: 50px;
+    vertical-align: center;
+    }
+    td {
+    text-align: center;
+    height: 30px;
+    width: 50px;
+    vertical-align: center;
+    }
+
+    </style>
+
+<script>
+  // Function to handle button click
+  function markButton(button) {
+    button.classList.toggle("marked"); // Add or remove "marked" class on button click
+  }
+
+  // Function to load the previously marked buttons on page load
+  window.addEventListener("load", function() {
+    var markedButtons = localStorage.getItem("markedButtons");
+    if (markedButtons) {
+      markedButtons = JSON.parse(markedButtons);
+      markedButtons.forEach(function(buttonId) {
+        var button = document.getElementById(buttonId);
+        if (button) {
+          button.classList.add("marked");
+        }
+      });
+    }
+  });
+
+  // Function to save marked buttons in local storage
+  window.addEventListener("beforeunload", function() {
+    var markedButtons = Array.from(document.getElementsByClassName("marked")).map(function(button) {
+      return button.id;
+    });
+    localStorage.setItem("markedButtons", JSON.stringify(markedButtons));
+  });
+</script>
+
+  <body>
+    <h1>Prayers</h1>
+    
+
+
+    <table class="table">
+       
+        <tbody>
+            <thead>
+         
+            
+            <div class="form-check form-check-inline">
+               <tr>
+            <th scope="col">
+        <label class="form-check-label" for="flexCheckChecked">Name</label>
+            </th>
+            <th scope="col">1</th>
+            <th scope="col">2</th>
+            <th scope="col">3</th>
+            <th scope="col">4</th>
+            <th scope="col">5</th>
+            <th scope="col">6</th>
+            <th scope="col">7</th>
+            <th scope="col">8</th>
+            <th scope="col">9</th>
+            <th scope="col">10</th>
+        </tr>
+        </thead>
+        <th scope="row">
+       <label class="form-check-label" for="flexCheckChecked">Fajar</label>
+       <td><button id="button1" onclick="markButton(this)">Namaz 1</button></td>
+       <td><button id="button2" onclick="markButton(this)">Namaz 2</button></td>
+       <td><button id="button3" onclick="markButton(this)">Namaz 3</button></td>
+       <td><button id="button4" onclick="markButton(this)">Namaz 4</button></td>
+       <td><button id="button5" onclick="markButton(this)">Namaz 5</button></td>
+       <td><button id="button6" onclick="markButton(this)">Namaz 6</button></td>
+       <td><button id="button7" onclick="markButton(this)">Namaz 7</button></td>
+       <td><button id="button8" onclick="markButton(this)">Namaz 8</button></td>
+       <td><button id="button9" onclick="markButton(this)">Namaz 9</button></td>
+       <td><button id="button10" onclick="markButton(this)">Namaz 10</button></td>
+            </th>
+          
+                <div class="form-check form-check-inline">
+                   <tr>
+                
+            </tr>
+            </thead>
+        <th scope="row">
+            <label class="form-check-label" for="flexCheckChecked">Zohar</label>
+            <td><button id="button11" onclick="markButton(this)">Namaz 1</button></td>
+            <td><button id="button12" onclick="markButton(this)">Namaz 2</button></td>
+            <td><button id="button13" onclick="markButton(this)">Namaz 3</button></td>
+            <td><button id="button14" onclick="markButton(this)">Namaz 4</button></td>
+            <td><button id="button15" onclick="markButton(this)">Namaz 5</button></td>
+            <td><button id="button16" onclick="markButton(this)">Namaz 6</button></td>
+            <td><button id="button17" onclick="markButton(this)">Namaz 7</button></td>
+            <td><button id="button18" onclick="markButton(this)">Namaz 8</button></td>
+            <td><button id="button19" onclick="markButton(this)">Namaz 9</button></td>
+            <td><button id="button20" onclick="markButton(this)">Namaz 10</button></td>
+                  </div>
+                </th> 
+               
+                    <div class="form-check form-check-inline">
+                       <tr>
+                    
+                </tr>
+                </thead>
+            <th scope="row">
+                <label class="form-check-label" for="flexCheckChecked">Asar</label>
+
+                <td><button id="button21" onclick="markButton(this)">Namaz 1</button></td>
+                <td><button id="button22" onclick="markButton(this)">Namaz 2</button></td>
+                <td><button id="button23" onclick="markButton(this)">Namaz 3</button></td>
+                <td><button id="button24" onclick="markButton(this)">Namaz 4</button></td>
+                <td><button id="button25" onclick="markButton(this)">Namaz 5</button></td>
+                <td><button id="button26" onclick="markButton(this)">Namaz 6</button></td>
+                <td><button id="button27" onclick="markButton(this)">Namaz 7</button></td>
+                <td><button id="button28" onclick="markButton(this)">Namaz 8</button></td>
+                <td><button id="button29" onclick="markButton(this)">Namaz 9</button></td>
+                <td><button id="button30" onclick="markButton(this)">Namaz 10</button></td>
+                      </div> 
+                    </th>
+                
+                        <div class="form-check form-check-inline">
+                           <tr>
+                        
+                    </tr>
+                    </thead>
+                <th scope="row">
+                  <label class="form-check-label" for="flexCheckChecked">Magrib</label>
+                  <td><button id="button31" onclick="markButton(this)">Namaz 1</button></td>
+                  <td><button id="button32" onclick="markButton(this)">Namaz 2</button></td>
+                  <td><button id="button33" onclick="markButton(this)">Namaz 3</button></td>
+                  <td><button id="button34" onclick="markButton(this)">Namaz 4</button></td>
+                  <td><button id="button35" onclick="markButton(this)">Namaz 5</button></td>
+                  <td><button id="button36" onclick="markButton(this)">Namaz 6</button></td>
+                  <td><button id="button37" onclick="markButton(this)">Namaz 7</button></td>
+                  <td><button id="button38" onclick="markButton(this)">Namaz 8</button></td>
+                  <td><button id="button39" onclick="markButton(this)">Namaz 9</button></td>
+                  <td><button id="button40" onclick="markButton(this)">Namaz 10</button></td>
+                          </div> 
+                       
+                            <div class="form-check form-check-inline">
+                               <tr>
+                            
+                        </tr>
+                        </thead>
+                    <th scope="row">
+                        <label class="form-check-label" for="flexCheckChecked">Esha</label>
+                        <td><button id="button41" onclick="markButton(this)">Namaz 1</button></td>
+                        <td><button id="button42" onclick="markButton(this)">Namaz 2</button></td>
+                        <td><button id="button43" onclick="markButton(this)">Namaz 3</button></td>
+                        <td><button id="button44" onclick="markButton(this)">Namaz 4</button></td>
+                        <td><button id="button45" onclick="markButton(this)">Namaz 5</button></td>
+                        <td><button id="button46" onclick="markButton(this)">Namaz 6</button></td>
+                        <td><button id="button47" onclick="markButton(this)">Namaz 7</button></td>
+                        <td><button id="button48" onclick="markButton(this)">Namaz 8</button></td>
+                        <td><button id="button49" onclick="markButton(this)">Namaz 9</button></td>
+                        <td><button id="button50" onclick="markButton(this)">Namaz 10</button></td>
+                              </div> 
+                            </tbody>
+                        </table>
+      
+
+            
+            
+      </div>
+  </body>
+</html>
